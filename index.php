@@ -18,7 +18,7 @@
             <label for="password">password</label>
             <input class="textbox" type="password" name="password" required>
             <input class="button" type="submit" name="submitBtn" value="login">
-            <label for="submitBtn">don't have an account? <a href="signup.html">Sign Up</a></label>
+            <label for="submitBtn">don't have an account? <a href="signup.php">Sign Up</a></label>
         </form>
     </div>
 </body>

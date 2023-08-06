@@ -22,7 +22,7 @@
             <label for="retypePassword">re-type password</label>
             <input class="textbox" type="password" name="retypePassword" required>
             <input class="button" type="submit" name="submitBtn" value="submit">
-            <label for="submitBtn">already have an account? <a href="index.html">Login</a></label>
+            <label for="submitBtn">already have an account? <a href="index.php">Login</a></label>
         </form>
     </div>
 </body>
