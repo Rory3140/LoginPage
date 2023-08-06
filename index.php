@@ -54,8 +54,14 @@ mysqli_close($conn);
             <input class="textbox" type="text" name="username" required>
             <label for="password">password</label>
             <input class="textbox" type="password" name="password" required>
+
+            <p class="error">
+                <?php if ($error):
+                    echo $error;
+                endif; ?>
+            </p>
+
             <input class="button" type="submit" name="submitBtn" value="login">
-            <span id="login-error" style="color: red;"></span>
             <label for="submitBtn">don't have an account? <a href="signup.php">Sign Up</a></label>
         </form>
     </div>
