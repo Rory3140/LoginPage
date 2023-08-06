@@ -1,18 +1,6 @@
 <?php
+include_once 'conn.php';
 session_start(); // Start the session
-
-$servername = "localhost";
-$username = "admin";
-$password = "admin";
-$dbname = "website";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 $error = '';
 // Process login form data
