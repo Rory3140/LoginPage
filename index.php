@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     // Query the database to check if the provided credentials are valid
-    $query = "SELECT id, username FROM users WHERE username = '$username' AND password = '$password'";
+    $query = "SELECT userid, username FROM users WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {
