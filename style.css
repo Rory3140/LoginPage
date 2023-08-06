@@ -77,3 +77,14 @@ label {
     color: red;
     font-size: 12px;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #7c9eb7;
+    text-align: center;
+}
