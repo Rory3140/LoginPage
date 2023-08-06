@@ -25,7 +25,7 @@ $username = $_SESSION['username'];
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="homecont">
         <h1>HOME</h1>
         <h2>Welcome,
             <?php echo $username; ?>
