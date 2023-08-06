@@ -50,17 +50,19 @@ mysqli_close($conn);
     <div class="container">
         <h1>LOGIN</h1>
         <form action="index.php" method="post" name="statsForm">
-            <label for="username">username</label>
-            <input class="textbox" type="text" name="username" required>
-            <label for="password">password</label>
-            <input class="textbox" type="password" name="password" required>
-
-            <p class="error">
-                <?php if ($error):
-                    echo $error;
-                endif; ?>
-            </p>
-
+            <div>
+                <label for="username">username</label>
+                <input class="textbox" type="text" name="username" required>
+            </div>
+            <div>
+                <label for="password">password</label>
+                <input class="textbox" type="password" name="password" required>
+            </div>
+            <?php if ($error): ?>
+                <p class="error">
+                    <?php echo $error; ?>
+                </p>
+            <?php endif; ?>
             <input class="button" type="submit" name="submitBtn" value="login">
             <label for="submitBtn">don't have an account? <a href="signup.php">Sign Up</a></label>
         </form>
