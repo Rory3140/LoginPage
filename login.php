@@ -22,8 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {
-        // Login successful, redirect to a secure page or set a session/cookie as required
-        echo "Login successful!";
+        // Login successful, redirect to homepage.html
+        header('Location: homepage.html');
+        exit;
     } else {
         echo "Invalid credentials. Please try again.";
     }
