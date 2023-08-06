@@ -1,4 +1,6 @@
 <?php
+include_once 'conn.php';
+
 session_start(); // Start the session
 
 // Check if the user is logged in (userid is stored in the session)
@@ -33,6 +35,8 @@ $username = $_SESSION['username'];
         <p>Your userid is:
             <?php echo $userid; ?>
         </p>
+
+        <a href="/GolfWebsite/index.php">Golf Stats</a>
     </div>
 </body>
 
