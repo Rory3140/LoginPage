@@ -1,4 +1,6 @@
 <?php
+session_start(); // Start the session
+
 $servername = "localhost";
 $username = "admin";
 $password = "admin";
@@ -19,12 +21,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     // Query the database to check if the provided credentials are valid
-    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+    $query = "SELECT id, username FROM users WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {
-        // Login successful, redirect to homepage.html
-        header('Location: homepage.html');
+        // Login successful, store userid in session and redirect to homepage.php
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['userid'] = $row['userid'];
+        $_SESSION['username'] = $row['username'];
+        header('Location: homepage.php');
         exit;
     } else {
         $error = "Invalid credentials. Please try again.";
