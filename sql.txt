@@ -15,15 +15,20 @@ CREATE TABLE shots (
 );
 
 CREATE TABLE average_distances (
-    userid INT PRIMARY KEY,
+    userid INT,
     club VARCHAR(50) NOT NULL,
     avg_distance DECIMAL(5, 2) NOT NULL,
+    PRIMARY KEY (userid, club),
     FOREIGN KEY (userid) REFERENCES users(userid)
 );
 
+
+---------------------------------------------------
+
 DELIMITER //
 
-CREATE TRIGGER update_average_on_first_shot
+-- Trigger to update average distance when a shot is added
+CREATE TRIGGER update_average_on_shot_added
 AFTER INSERT ON shots
 FOR EACH ROW
 BEGIN
@@ -37,29 +42,16 @@ BEGIN
     WHERE userid = NEW.userid AND club = NEW.club;
     
     -- Calculate average distance
-    SET avg_distance = total_distance / shot_count;
+    SET avg_distance = total_distance / NULLIF(shot_count, 0);
     
-    -- Check if the club exists in average_distances table for the user
-    IF NOT EXISTS (
-        SELECT 1 FROM average_distances
-        WHERE userid = NEW.userid AND club = NEW.club
-    ) THEN
-        -- Insert a new record for the club with the initial average distance
-        INSERT INTO average_distances (userid, club, avg_distance)
-        VALUES (NEW.userid, NEW.club, avg_distance);
-    ELSE
-        -- Update the average distance in average_distances table
-        INSERT INTO average_distances (userid, club, avg_distance)
-        VALUES (NEW.userid, NEW.club, avg_distance)
-        ON DUPLICATE KEY UPDATE avg_distance = avg_distance;
-    END IF;
+    -- Insert or update the average distance in average_distances table
+    INSERT INTO average_distances (userid, club, avg_distance)
+    VALUES (NEW.userid, NEW.club, avg_distance)
+    ON DUPLICATE KEY UPDATE avg_distance = avg_distance;
 END;
 //
 
-DELIMITER ;
-
-DELIMITER //
-
+-- Trigger to update average distance when a shot is removed
 CREATE TRIGGER update_average_on_shot_removed
 AFTER DELETE ON shots
 FOR EACH ROW
