@@ -57,7 +57,7 @@ mysqli_close($conn);
             </div>
             <div>
                 <label for="email">email</label>
-                <input class="textbox" type="text" name="email" required>
+                <input class="textbox" type="email" name="email" required>
             </div>
             <div>
                 <label for="password">password</label>
