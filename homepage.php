@@ -27,6 +27,8 @@ $username = $_SESSION['username'];
 </head>
 
 <body>
+    <a href="logout.php" class="button" id="logout">Logout</a>
+
     <div class="container" id="homecont">
         <h1>HOME</h1>
         <h2>Welcome,
@@ -36,7 +38,7 @@ $username = $_SESSION['username'];
             <?php echo $userid; ?>
         </p>
 
-        <a href="/GolfWebsite/golfwebsite.php">Golf Stats</a>
+        <a href="/GolfWebsite/golfwebsite.php" class="button" id="app">Golf Stats</a>
     </div>
 </body>
 

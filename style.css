@@ -52,13 +52,15 @@ label {
 }
 
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ffc20c;
     border: none;
     color: #000;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    justify-content: center;
     height: 40px;
     width: 200px;
     overflow: hidden;
@@ -75,13 +77,26 @@ label {
     transform: translate(-4px, -4px);
 }
 
+#home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    height: 20px;
+    width: 100px;
+}
+
 #logout {
     position: absolute;
     top: 0;
     right: 0;
-    text-align: center;
     margin: 10px;
     height: 20px;
+    width: 100px;
+}
+
+#app {
+    height: 100px;
     width: 100px;
 }
 
