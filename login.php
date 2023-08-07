@@ -42,7 +42,7 @@ mysqli_close($conn);
 <body>
     <div class="container">
         <h1>LOGIN</h1>
-        <form action="index.php" method="post" name="statsForm">
+        <form action="login.php" method="post" name="statsForm">
             <div>
                 <label for="username">username</label>
                 <input class="textbox" type="text" name="username" required>

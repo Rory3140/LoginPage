@@ -6,7 +6,7 @@ session_start(); // Start the session
 // Check if the user is logged in (userid is stored in the session)
 if (!isset($_SESSION['userid'])) {
     // User is not logged in, redirect to the login page
-    header('Location: index.php');
+    header('Location: login.php');
     exit;
 }
 
@@ -36,7 +36,7 @@ $username = $_SESSION['username'];
             <?php echo $userid; ?>
         </p>
 
-        <a href="/GolfWebsite/index.php">Golf Stats</a>
+        <a href="/GolfWebsite/golfwebsite.php">Golf Stats</a>
     </div>
 </body>
 

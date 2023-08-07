@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Insert new user into the database
             $query = "INSERT INTO users (email, username, password) VALUES ('$email', '$username', '$password')";
             if (mysqli_query($conn, $query)) {
-                header('Location: index.php');
+                header('Location: login.php');
                 exit;
             } else {
                 $error = "Error: " . mysqli_error($conn);
@@ -73,7 +73,7 @@ mysqli_close($conn);
                 </p>
             <?php endif; ?>
             <input class="button" type="submit" name="submitBtn" value="submit">
-            <label for="submitBtn">already have an account? <a href="index.php">Login</a></label>
+            <label for="submitBtn">already have an account? <a href="login.php">Login</a></label>
         </form>
     </div>
 </body>
