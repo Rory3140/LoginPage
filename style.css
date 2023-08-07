@@ -58,6 +58,7 @@ label {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    justify-content: center;
     height: 40px;
     width: 200px;
     overflow: hidden;
@@ -65,12 +66,23 @@ label {
     margin: 13px;
     text-decoration: none;
     text-overflow: ellipsis;
+    text-overflow: ellipsis;
     transition: all .14s ease-out;
 }
 
 .button:hover {
     box-shadow: 4px 4px 0 #000;
     transform: translate(-4px, -4px);
+}
+
+#logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin: 10px;
+    height: 20px;
+    width: 100px;
 }
 
 .error {
