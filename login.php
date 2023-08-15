@@ -60,6 +60,8 @@ mysqli_close($conn);
             <label for="submitBtn">don't have an account? <a href="signup.php">Sign Up</a></label>
         </form>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -76,6 +76,8 @@ mysqli_close($conn);
             <label for="submitBtn">already have an account? <a href="login.php">Login</a></label>
         </form>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
