@@ -18,7 +18,7 @@ body {
 }
 
 #homecont {
-    width: 100%;
+    width: 65%;
 }
 
 form {
@@ -98,6 +98,10 @@ label {
 #app {
     height: 100px;
     width: 100px;
+}
+
+#applist {
+    display: flex;
 }
 
 .error {
