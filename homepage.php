@@ -34,8 +34,9 @@ $username = $_SESSION['username'];
             <div class="line"></div>
             <div class="line"></div>
         </div>
+        <a href="/LoginPage/homepage.php" class="button">Home</a>
         <a href="" class="button">Profile</a>
-        <a href="logout.php" class="button">Logout</a>
+        <a href="/LoginPage/logout.php" class="button" id="logout">Logout</a>
     </nav>
 
     <div class="container" id="homecont">

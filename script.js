@@ -1,6 +1,6 @@
 console.log('script.js Linked');
 
-var navbar = document.querySelector('#navbar');
+var navbar = document.querySelector('.navbar');
 var navDim = navbar.offsetTop;
 
 window.onscroll = function () {
@@ -11,3 +11,4 @@ window.onscroll = function () {
     navbar.classList.remove("sticky");
   }
 };
+
