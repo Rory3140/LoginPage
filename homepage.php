@@ -27,7 +27,16 @@ $username = $_SESSION['username'];
 </head>
 
 <body>
-    <a href="logout.php" class="button" id="logout">Logout</a>
+
+    <nav class="navbar">
+        <div class="menu-icon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <a href="" class="button">Profile</a>
+        <a href="logout.php" class="button">Logout</a>
+    </nav>
 
     <div class="container" id="homecont">
         <h1>HOME</h1>
