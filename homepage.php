@@ -28,8 +28,8 @@ $username = $_SESSION['username'];
 
 <body>
 
-    <nav class="navbar">
-        <div class="menu-icon">
+    <nav id="navbar">
+        <div id="menu-icon">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
