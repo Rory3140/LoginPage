@@ -49,8 +49,8 @@ $username = $_SESSION['username'];
         </p>
 
         <div id="applist">
-            <a href="/GolfWebsite/golfwebsite.php" class="button" id="app">Golf Stats</a>
-            <a href="/resume/index.html" class="button" id="app">Resume</a>
+            <a href="../GolfWebsite/golfwebsite.php" class="button" id="app">Golf Stats</a>
+            <a href="../resume/index.html" class="button" id="app">Resume</a>
         </div>
 
     </div>
