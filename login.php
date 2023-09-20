@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['userid'] = $row['userid'];
         $_SESSION['username'] = $row['username'];
-        header('Location: homepage.php');
+        header('Location: ../loginPage/home.php');
         exit;
     } else {
         $error = "Invalid credentials. Please try again.";
@@ -35,7 +35,7 @@ mysqli_close($conn);
     <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/modules/loginPage/style.css">
+    <link rel="stylesheet" href="../loginPage/style.css">
 
 </head>
 

@@ -6,7 +6,7 @@ session_start(); // Start the session
 // Check if the user is logged in (userid is stored in the session)
 if (!isset($_SESSION['userid'])) {
     // User is not logged in, redirect to the login page
-    header('Location: /modules/loginPage/login.php');
+    header('Location: ../loginPage/login.php');
     exit;
 }
 
@@ -22,7 +22,7 @@ $username = $_SESSION['username'];
     <title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/modules/loginPage/style.css">
+    <link rel="stylesheet" href="../loginPage/style.css">
 
 </head>
 
@@ -34,9 +34,9 @@ $username = $_SESSION['username'];
             <div class="line"></div>
             <div class="line"></div>
         </div>
-        <a href="/modules/loginPage/homepage.php" class="button">Home</a>
+        <a href="../loginPage/home.php" class="button">Home</a>
         <a href="" class="button">Profile</a>
-        <a href="/modules/loginPage/logout.php" class="button" id="logout">Logout</a>
+        <a href="../loginPage/logout.php" class="button" id="logout">Logout</a>
     </nav>
 
     <div class="container" id="homecont">

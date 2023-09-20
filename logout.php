@@ -1,5 +1,5 @@
 <?php
     session_start();
     session_destroy();
-    header('Location: /LoginPage/login.php');
+    header('Location: ../loginPage/login.php');
     exit;
