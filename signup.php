@@ -43,7 +43,7 @@ mysqli_close($conn);
     <title>Sign Up</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loginPage/style.css">
 
 </head>
 
@@ -77,7 +77,7 @@ mysqli_close($conn);
         </form>
     </div>
 
-    <script src="script.js"></script>
+    <script src="../loginPage/script.js"></script>
 </body>
 
 </html>

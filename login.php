@@ -61,7 +61,7 @@ mysqli_close($conn);
         </form>
     </div>
 
-    <script src="script.js"></script>
+    <script src="../loginPage/script.js"></script>
 </body>
 
 </html>

@@ -55,7 +55,7 @@ $username = $_SESSION['username'];
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="../loginPage/script.js"></script>
 </body>
 
 </html>
