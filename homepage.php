@@ -6,7 +6,7 @@ session_start(); // Start the session
 // Check if the user is logged in (userid is stored in the session)
 if (!isset($_SESSION['userid'])) {
     // User is not logged in, redirect to the login page
-    header('Location: login.php');
+    header('Location: /modules/loginPage/login.php');
     exit;
 }
 
@@ -22,7 +22,7 @@ $username = $_SESSION['username'];
     <title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/modules/loginPage/style.css">
 
 </head>
 
@@ -34,9 +34,9 @@ $username = $_SESSION['username'];
             <div class="line"></div>
             <div class="line"></div>
         </div>
-        <a href="/LoginPage/homepage.php" class="button">Home</a>
+        <a href="/modules/loginPage/homepage.php" class="button">Home</a>
         <a href="" class="button">Profile</a>
-        <a href="/LoginPage/logout.php" class="button" id="logout">Logout</a>
+        <a href="/modules/loginPage/logout.php" class="button" id="logout">Logout</a>
     </nav>
 
     <div class="container" id="homecont">
@@ -49,7 +49,7 @@ $username = $_SESSION['username'];
         </p>
 
         <div id="applist">
-            <a href="../GolfWebsite/golfwebsite.php" class="button" id="app">Golf Stats</a>
+            <a href="../golfStats/golfstats.php" class="button" id="app">Golf Stats</a>
             <a href="../resume/index.html" class="button" id="app">Resume</a>
         </div>
 

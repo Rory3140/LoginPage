@@ -35,7 +35,7 @@ mysqli_close($conn);
     <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/modules/loginPage/style.css">
 
 </head>
 
