@@ -22,13 +22,17 @@ menuButton.onclick = function () {
     navHidden = false;
     console.log(navButtons.length);
     for (let i = 0; i < navButtons.length; i++) {
-      navButtons[i].style.display = 'flex';
+     //navButtons[i].style.display = 'flex';
+     //navButtons[i].style.width = '150px';
+     navButtons[i].style.left = '0px';
     }
   } else {
     navBar.style.width = '50px';
     navHidden = true;
     for (let i = 0; i < navButtons.length; i++) {
-      navButtons[i].style.display = 'none';
+      //navButtons[i].style.display = 'none';
+      //navButtons[i].style.width = '0px';
+      navButtons[i].style.left = '-200px';
     }
   }
 };
