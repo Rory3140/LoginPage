@@ -1,7 +1,7 @@
 console.log('script.js Linked');
 
 var navBar = document.getElementById('navbar');
-var navDim = navbar.offsetTop;
+var navDim = navBar.offsetTop;
 
 window.onscroll = function () {
   // Sticky navbar
