@@ -36,7 +36,7 @@ mysqli_close($conn);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../loginPage/style.css">
-    <link rel="icon" href="../loginPage/images/websiteIcon">
+    <link rel="icon" href="../loginPage/images/websiteIcon.ico">
 
 </head>
 
