@@ -50,6 +50,7 @@ $username = $_SESSION['username'];
         </p>
 
         <div id="applist">
+            <a href="" class="button" id="app">To-Do List</a>
             <a href="../golfStats/golfstats.php" class="button" id="app">Golf Stats</a>
             <a href="../resume/index.html" class="button" id="app">Resume</a>
         </div>
