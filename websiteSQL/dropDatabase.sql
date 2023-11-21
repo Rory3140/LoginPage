@@ -6,4 +6,6 @@ DROP TABLE average_distances;
 
 DROP TABLE shots;
 
+DROP TABLE todo;
+
 DROP TABLE users;
