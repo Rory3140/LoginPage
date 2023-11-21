@@ -5,6 +5,14 @@ CREATE TABLE users (
    password VARCHAR(100) NOT NULL
 );
 
+CREATE TABLE todo (
+   todoid INT AUTO_INCREMENT PRIMARY KEY,
+   userid INT,
+   message_text VARCHAR(200) NOT NULL,
+   message_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
 CREATE TABLE shots (
    shotid INT AUTO_INCREMENT PRIMARY KEY,
    userid INT,
