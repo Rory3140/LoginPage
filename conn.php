@@ -1,6 +1,6 @@
 <?php
 $serverip = "website.cxis6qocq7rk.eu-west-2.rds.amazonaws.com";
-$username = "websiteAccess";
+$username = "admin";
 $password = "Woody3120!";
 $dbname = "website";
 
