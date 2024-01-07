@@ -1,5 +1,5 @@
 <?php
-include_once 'conn.php';
+include_once '../conn.php';
 
 $error = '';
 // Process sign up form data
@@ -43,8 +43,8 @@ mysqli_close($conn);
     <title>Sign Up</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../loginPage/style.css">
-    <link rel="icon" href="../loginPage/images/websiteIcon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/websiteIcon.ico">
 
 </head>
 
@@ -78,7 +78,7 @@ mysqli_close($conn);
         </form>
     </div>
 
-    <script src="../loginPage/script.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

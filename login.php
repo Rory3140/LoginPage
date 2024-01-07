@@ -1,5 +1,5 @@
 <?php
-include_once 'conn.php';
+include_once '../conn.php';
 session_start(); // Start the session
 
 $error = '';
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['userid'] = $row['userid'];
         $_SESSION['username'] = $row['username'];
-        header('Location: ../loginPage/home.php');
+        header('Location: ../home.php');
         exit;
     } else {
         $error = "Invalid credentials. Please try again.";
@@ -35,8 +35,8 @@ mysqli_close($conn);
     <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../loginPage/style.css">
-    <link rel="icon" href="../loginPage/images/websiteIcon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/websiteIcon.ico">
 
 </head>
 
@@ -62,7 +62,7 @@ mysqli_close($conn);
         </form>
     </div>
 
-    <script src="../loginPage/script.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>
